@@ -1,0 +1,22 @@
+name: Java CI
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Set up Java 21
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify weather-service
+        working-directory: weather-service
+        run: bash ./mvnw --batch-mode verify
+      - name: Verify weather-loader-service
+        working-directory: weather-loader-service
+        run: bash ./mvnw --batch-mode verify
