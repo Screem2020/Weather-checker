@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class WeatherLoadServiceApplication
+class WeatherLoaderServiceApplication
 
 fun main(args: Array<String>) {
-    runApplication<WeatherLoadServiceApplication>(*args)
+    runApplication<WeatherLoaderServiceApplication>(*args)
 }
