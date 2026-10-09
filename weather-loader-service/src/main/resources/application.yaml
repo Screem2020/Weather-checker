@@ -1,3 +1,6 @@
 spring:
   application:
     name: weather-loader-service
+logging:
+  level:
+    io.github.screem2020.weatherloader.geocoding: DEBUG
